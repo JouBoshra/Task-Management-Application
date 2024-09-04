@@ -1,0 +1,328 @@
+/* General Styling */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Container Styling */
+.container {
+  max-width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.flex-large {
+  flex: 1;
+  min-width: 300px;
+  margin: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+/* Completed Task Text Style */
+.completed-task {
+  color: green;
+  font-weight: bold;
+}
+
+/* Completed Row Effect */
+.completed-row {
+  background-color: #e0ffe0; /* Light green background */
+  transition: background-color 0.3s ease;
+}
+
+.animated-button {
+  transition: all 0.2s ease;
+}
+
+.animated-button:hover {
+  transform: scale(1.05);
+}
+
+/* Table and Row Styling */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.user-table th,
+.user-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.user-table th {
+  background-color: #f4f4f4;
+}
+
+.animated-row {
+  transition: background-color 0.3s ease;
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+td input[type="checkbox"] {
+  margin-left: 0;
+}
+
+button {
+  margin-right: 5px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #0366ee;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0246a2;
+}
+
+.muted-button {
+  background-color: grey;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Completed Row Styling */
+.completed td {
+  text-decoration: line-through;
+  color: grey;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .flex-row {
+    flex-direction: column;
+  }
+
+  table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+  }
+
+  th,
+  td {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1,
+  h2 {
+    font-size: 18px;
+  }
+
+  button {
+    padding: 5px 8px;
+  }
+}
+
+:root {
+  --primary-color: #3a86ff;
+  --secondary-color: #ff006e;
+  --background-color: #f7f9fc;
+  --text-color: #2d2d2d;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.animated-heading {
+  animation: slideIn 0.8s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+button,
+input,
+table,
+form {
+  transition: all 0.5s ease-in-out;
+}
+
+.animated-button {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50px;
+  padding: 15px 25px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  animation: buttonPulse 1.5s infinite;
+}
+
+.animated-button:hover {
+  background-color: var(--secondary-color);
+}
+
+@keyframes buttonPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  }
+}
+
+input {
+  border: 2px solid var(--primary-color);
+  padding: 15px;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+input:focus {
+  border-color: var(--secondary-color);
+  outline: none;
+  box-shadow: 0 0 10px var(--secondary-color);
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.animated-table {
+  animation: tablePopIn 1s ease-out;
+}
+
+@keyframes tablePopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animated-row {
+  animation: rowSlideUp 0.8s ease-in-out;
+}
+
+@keyframes rowSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-large {
+  flex: 1;
+  margin: 10px;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .flex-row {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+.creative-animated-form {
+  animation: formBounceIn 0.8s ease-in-out;
+}
+
+@keyframes formBounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) rotate(-5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+.task-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.task-item span {
+  margin-left: 10px;
+}
+
+.task-item.completed span {
+  text-decoration: line-through;
+  color: grey;
+}
+.completed {
+  text-decoration: line-through;
+  color: grey;
+}
